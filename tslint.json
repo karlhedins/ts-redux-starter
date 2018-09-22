@@ -1,6 +1,12 @@
 {
   "extends": [],
   "defaultSeverity": "warning",
+  "semicolon": [
+    true,
+    "always",
+    "ignore-interfaces",
+    "ignore-bound-class-methods"
+  ],
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
