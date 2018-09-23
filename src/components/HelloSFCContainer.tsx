@@ -1,6 +1,6 @@
 import HelloSFC from "../components/HelloSFC";
 import * as actions from "../actions/";
-import { StoreState } from "../types/index";
+import { IStoreState } from "../types/index";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 
@@ -22,7 +22,10 @@ so we can create a pair of callbacks that will call the dispatcher as necessary.
 
 */
 
-export function mapStateToProps({ enthusiasmLevel, languageName }: StoreState) {
+export function mapStateToProps({
+  enthusiasmLevel,
+  languageName
+}: IStoreState) {
   return {
     enthusiasmLevel,
     name: languageName

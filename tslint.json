@@ -1,12 +1,15 @@
 {
-  "extends": [],
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
   "defaultSeverity": "warning",
-  "semicolon": [
-    true,
-    "always",
-    "ignore-interfaces",
-    "ignore-bound-class-methods"
-  ],
+  "rules": {
+    "member-access": false,
+    "no-submodule-imports": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "trailing-comma": false
+  },
+  // "interface-name": [true, "always-prefix"],
   "linterOptions": {
     "exclude": [
       "config/**/*.js",

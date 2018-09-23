@@ -1,13 +1,18 @@
 import * as React from "react";
 
-export interface Props {
+export interface IProps {
   name: string;
   enthusiasmLevel?: number;
   onIncrement?: () => void;
   onDecrement?: () => void;
 }
 
-function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
+function Hello({
+  name,
+  enthusiasmLevel = 1,
+  onIncrement,
+  onDecrement
+}: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error("You could be a little more enthusiastic. :D");
   }

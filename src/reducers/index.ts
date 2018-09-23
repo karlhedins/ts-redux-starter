@@ -1,11 +1,11 @@
 import { EnthusiasmAction } from "../actions";
-import { StoreState } from "../types/index";
+import { IStoreState } from "../types/index";
 import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from "../constants/index";
 
 export function enthusiasm(
-  state: StoreState,
+  state: IStoreState,
   action: EnthusiasmAction
-): StoreState {
+): IStoreState {
   switch (action.type) {
     case INCREMENT_ENTHUSIASM:
       return { ...state, enthusiasmLevel: state.enthusiasmLevel + 1 };

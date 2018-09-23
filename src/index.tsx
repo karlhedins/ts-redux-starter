@@ -8,18 +8,19 @@ import registerServiceWorker from "./registerServiceWorker";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { enthusiasm } from "./reducers/index";
-import { StoreState } from "./types/index";
+import { IStoreState } from "./types/index";
 
 import { EnthusiasmAction } from "./actions/index";
 import HelloSFCContainer from "./components/HelloSFCContainer";
 
 declare global {
+  // tslint:disable-next-line
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION__: any;
   }
 }
 
-const store = createStore<StoreState, EnthusiasmAction, any, any>(
+const store = createStore<IStoreState, EnthusiasmAction, any, any>(
   enthusiasm,
   {
     enthusiasmLevel: 1,
